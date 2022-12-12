@@ -1,62 +1,70 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-  <meta charset="utf-8">
-  <title>INIAD天気予報</title>
-  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='weather.css')}}">
-</head>
-
-<body>
-  <div id="header">
-    <a href="https://www.iniad.org"><img src="http://moocs-files.iniad.org/2018/CS2/web/iniad.png" alt="INIADのロゴですtest"></a>
-  </div>
-  <div id="container">
-    <h1><strong>INIAD天気予報</strong></h1>
+  <head>
+    <meta charset="utf-8">
+    <title>INIAD天気予報</title>
+  </head>
+  <body>
+    <h1>INIAD天気予報</h1>
     <form method="post" action="/">
       <p>
-        <input id="input-keyword" type="text" value="東京都北区赤羽台">
-        <input id="input-search" type="submit" value="検索">
+        <input type="text" value="東京都北区赤羽台">
+        <input type="submit" value="検索">
       </p>
     </form>
-     <div id="content">
-      <div id="sidebar">
-        <h2>{{city}}</h2>
-        <ul>
-          <li>緯度 : 35</li>
-          <li>経度 : 139</li>
-        </ul>
-      </div>
-      <div id="main">
-        <p class="description">東京都北区赤羽台の天気予報は、以下のとおりです。</p>
 
-        <table>
-          <tr>
-            <th>日時</th>
-            <th>天気</th>
-            <th>気温</th>
-            <th>気圧</th>
-            <th>湿度</th>
-          </tr>
-          
-            {% for item in forecast %}
-            <tr>
-              <td>{{item['date']}}</td>
-              <td>{{item['weather']}}</td>
-              <td>{{item['temperature']}}</td>
-              <td>{{item['pressure']}}</td>
-              <td>{{item['humidity']}}</td>
-            </tr>
-            {% endfor %}
-        </table>
-      </div>
-    </div>
-  </div>
-  </ul>
-  </div>
-  <div id="footer">
-    <a href="https://www.iniad.org">INIAD</a>
-  </div>
-</body>
+    <h2>東京都北区赤羽台</h2>
+    <ul>
+      <li>緯度 : 35</li>
+      <li>経度 : 139</li>
+    </ul>
+    
+    <p>東京都北区赤羽台の天気予報は、以下のとおりです。</p>
+    
+    <table>
+      <tr>
+        <th>日時</th>
+        <th>天気</th>
+        <th>気温</th>
+        <th>気圧</th>
+        <th>湿度</th>
+      </tr>
 
+      <tr>
+        <td>2020-06-08 00:00</td>
+        <td>Clouds</td>
+        <td>20</td>
+        <td>1000</td>
+        <td>74</td>
+      </tr>
+      <tr>
+        <td>2020-06-08 03:00</td>
+        <td>Clouds</td>
+        <td>20</td>
+        <td>1000</td>
+        <td>74</td>
+      </tr>
+      <tr>
+        <td>2020-06-08 03:00</td>
+        <td>Clouds</td>
+        <td>20</td>
+        <td>1000</td>
+        <td>74</td>
+      </tr>
+      <tr>
+        <td>2020-06-08 03:00</td>
+        <td>Clouds</td>
+        <td>20</td>
+        <td>1000</td>
+        <td>74</td>
+      </tr>
+      <tr>
+        <td>2020-06-08 12:00</td>
+        <td>Clouds</td>
+        <td>20</td>
+        <td>1000</td>
+        <td>74</td>
+      </tr>
+    </table>
+  </body>
 </html>
