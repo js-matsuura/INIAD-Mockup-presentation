@@ -8,3 +8,9 @@ html {
   }
 }
 
+body {
+  background-image: url("image/A00004865.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
